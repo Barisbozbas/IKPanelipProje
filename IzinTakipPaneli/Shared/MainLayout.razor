@@ -1,0 +1,32 @@
+﻿@inherits LayoutComponentBase
+
+<RadzenBody Style="min-height: 100vh;">
+    <RadzenHeader Style="background-color: #007bff; color: white; padding: 10px; display:flex; align-items:center;">
+        <span class="mobile-menu-btn" @onclick="ToggleSidebar">&#9776;</span>
+        <RadzenHeading Size="H3" Text="İzin Takip Paneli" Style="margin:0;" />
+    </RadzenHeader>
+
+    <RadzenSidebar class="@sidebarCssClass" Style="width: 220px; background-color: #f8f9fa;">
+        <RadzenPanelMenu Style="width: 100%;" ExpandMode="Single">
+            <RadzenPanelMenuItem Text="İzin Girişi" Path="/izin-giris" Icon="event" />
+            <RadzenPanelMenuItem Text="İzin Listesi" Path="/izin-liste" Icon="list" />
+            <RadzenPanelMenuItem Text="Yönetim Paneli" Path="/yonetim-paneli" Icon="supervisor_account" />
+            <RadzenPanelMenuItem Text="Kullanıcı Oluştur" Path="/kullanici-olustur" Icon="person_add" />
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+
+    <RadzenMain Style="margin-left: 220px; padding: 20px;">
+        @Body
+    </RadzenMain>
+</RadzenBody>
+
+@code {
+    private bool sidebarVisible = false;
+
+    private string sidebarCssClass => sidebarVisible ? "rz-sidebar active" : "rz-sidebar";
+
+    private void ToggleSidebar()
+    {
+        sidebarVisible = !sidebarVisible;
+    }
+}
