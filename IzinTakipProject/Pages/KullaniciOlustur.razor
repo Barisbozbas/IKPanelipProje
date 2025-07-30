@@ -78,15 +78,9 @@
     private bool isAdmin = false;
     private KullaniciCreateModel yeniKullanici = new();
     private string mesaj;
-
+    private List<DepartmanModelim> departmanlar = new();
     // Departmanlar örnek (gerçek projede API'den çekilebilir!)
-    private List<Departman> departmanlar = new()
-    {
-        new Departman{ Id = 1, Ad = "Bilgi İşlem" },
-        new Departman{ Id = 2, Ad = "İnsan Kaynakları" },
-        new Departman{ Id = 3, Ad = "Muhasebe" },
-        new Departman{ Id = 4, Ad = "Satış" }
-    };
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -94,8 +88,9 @@
         var user = authState.User;
         isAdmin = user.IsInRole("Admin");
 
-        // Eğer departmanları API'den çekeceksen:
-        // departmanlar = await Http.GetFromJsonAsync<List<DepartmanModel>>("api/departmanlar");
+     
+        departmanlar = await Http.GetFromJsonAsync<List<DepartmanModelim>>("api/departman");
+
     }
 
     private async Task KullaniciEkle()
@@ -122,9 +117,9 @@
     }
 
 
-    public class DepartmanModel
+    public class DepartmanModelim
     {
-        public string Id { get; set; }
+        public int  Id { get; set; }
         public string Ad { get; set; }
     }
 }
