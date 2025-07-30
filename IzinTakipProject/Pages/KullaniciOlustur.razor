@@ -1,0 +1,130 @@
+﻿@page "/kullanici-olustur"
+@using System.ComponentModel.DataAnnotations
+@using BlazorBootstrap
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+
+<h3>Kullanıcı Oluşturma Ekranı</h3>
+
+<AuthorizeView >
+    <Authorized>
+        @if (!isAdmin)
+        {
+            <div class="alert alert-warning mt-4">
+                Bu sayfaya sadece <strong>Admin</strong> rolü erişebilir.
+            </div>
+        }
+        else
+        {
+            <EditForm Model="yeniKullanici" OnValidSubmit="KullaniciEkle" Context="formContext">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label>Ad Soyad</label>
+                        <InputText class="form-control" @bind-Value="yeniKullanici.AdSoyad" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Email</label>
+                        <InputText class="form-control" @bind-Value="yeniKullanici.Email" type="email" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Şifre</label>
+                        <InputText class="form-control" @bind-Value="yeniKullanici.Sifre" type="password" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Rol</label>
+                        <InputSelect class="form-control" @bind-Value="yeniKullanici.Rol">
+                            <option value="">Rol Seçiniz</option>
+                            <option value="ADMIN">Admin</option>
+                            <option value="YONETICI">Yönetici</option>
+                            <option value="CALISAN">Çalışan</option>
+                        </InputSelect>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Departman</label>
+                        <InputSelect class="form-control" @bind-Value="yeniKullanici.DepartmanId">
+                            <option value="">Departman Seçiniz</option>
+                            @foreach (var dep in departmanlar)
+                            {
+                                <option value="@dep.Id">@dep.Ad</option>
+                            }
+                        </InputSelect>
+                    </div>
+                </div>
+                <RadzenButton Text="Oluştur"
+                              Icon="add_circle"
+                              ButtonStyle="ButtonStyle.Primary"
+                              Style="margin-top: 1.5rem;"
+                              Click="@KullaniciEkle" />
+            </EditForm>
+
+            @if (!string.IsNullOrEmpty(mesaj))
+            {
+                <div class="alert alert-success mt-3">@mesaj</div>
+            }
+        }
+    </Authorized>
+    <NotAuthorized>
+        <div class="alert alert-danger mt-4">
+            Lütfen giriş yapınız.
+        </div>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private bool isAdmin = false;
+    private KullaniciCreateModel yeniKullanici = new();
+    private string mesaj;
+
+    // Departmanlar örnek (gerçek projede API'den çekilebilir!)
+    private List<Departman> departmanlar = new()
+    {
+        new Departman{ Id = 1, Ad = "Bilgi İşlem" },
+        new Departman{ Id = 2, Ad = "İnsan Kaynakları" },
+        new Departman{ Id = 3, Ad = "Muhasebe" },
+        new Departman{ Id = 4, Ad = "Satış" }
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        isAdmin = user.IsInRole("Admin");
+
+        // Eğer departmanları API'den çekeceksen:
+        // departmanlar = await Http.GetFromJsonAsync<List<DepartmanModel>>("api/departmanlar");
+    }
+
+    private async Task KullaniciEkle()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/kullanici", yeniKullanici);
+            if (response.IsSuccessStatusCode)
+            {
+                mesaj = "Kullanıcı başarıyla oluşturuldu!";
+                yeniKullanici = new(); 
+            }
+            else
+            {
+               
+                var errorContent = await response.Content.ReadAsStringAsync();
+                mesaj = $"Hata: {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            mesaj = $"Bir hata oluştu: {ex.Message}";
+        }
+    }
+
+
+    public class DepartmanModel
+    {
+        public string Id { get; set; }
+        public string Ad { get; set; }
+    }
+}

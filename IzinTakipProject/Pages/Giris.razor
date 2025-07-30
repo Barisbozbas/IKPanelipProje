@@ -1,0 +1,92 @@
+﻿ @page "/giris"
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+@using System.ComponentModel.DataAnnotations
+
+<div class="login-container">
+    <div class="login-box">
+        <div class="login-header">
+            <h2>İzin Takip Sistemi</h2>
+            <p>Lütfen hesap bilgilerinizle giriş yapın</p>
+        </div>
+
+        <EditForm Model="@model" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label for="email">E-posta</label>
+                <InputText @bind-Value="model.Eposta" id="email" class="form-control" />
+                <ValidationMessage For="@(() => model.Eposta)" />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Şifre</label>
+                <InputText @bind-Value="model.Sifre" id="password" type="password" class="form-control" />
+                <ValidationMessage For="@(() => model.Sifre)" />
+            </div>
+
+            <div class="form-group form-check">
+                <InputCheckbox @bind-Value="rememberMe" class="form-check-input" id="remember" />
+                <label class="form-check-label" for="remember">Beni hatırla</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="alert alert-danger mt-3">
+                    @errorMessage
+                </div>
+            }
+        </EditForm>
+
+     
+    </div>
+</div>
+
+@code {
+    private GirisModel model = new();
+    private string errorMessage;
+    private bool rememberMe = true;
+
+    private async Task HandleLogin()
+    {
+        errorMessage = null;
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/auth/login", model);
+            if (response.IsSuccessStatusCode)
+            {
+                var loginResult = await response.Content.ReadFromJsonAsync<LoginResult>();
+                await ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsAuthenticated(loginResult);
+                Navigation.NavigateTo("/", true);
+            }
+            else
+            {
+                var error = await response.Content.ReadFromJsonAsync<ApiError>();
+                errorMessage = error?.Error ?? "Geçersiz giriş denemesi";
+            }
+        }
+        catch
+        {
+            errorMessage = "Giriş sırasında bir hata oluştu";
+        }
+    }
+
+    private class ApiError
+    {
+        public string Error { get; set; }
+    }
+
+    public class GirisModel
+    {
+        [Required(ErrorMessage = "E-posta gerekli")]
+        [EmailAddress(ErrorMessage = "Geçersiz e-posta")]
+        public string Eposta { get; set; }
+
+        [Required(ErrorMessage = "Şifre gerekli")]
+        public string Sifre { get; set; }
+    }
+}

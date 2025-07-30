@@ -1,0 +1,66 @@
+﻿@page "/departman-ekle"
+@using System.ComponentModel.DataAnnotations
+@inject HttpClient Http
+
+<h3 class="text-center my-4">Yeni Departman Tanımla</h3>
+
+<AuthorizeView Roles="Admin" Context="authContext">
+    <Authorized>
+        <div class="d-flex justify-content-center" style="min-height: calc(100vh - 80px);">
+            <div class="w-100" style="max-width: 420px; margin-top: 60px;">
+                <EditForm Model="@departman">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="card shadow p-4 border-0">
+                        <div class="mb-3">
+                            <label class="form-label">Departman Adı:</label>
+                            <InputText class="form-control" @bind-Value="departman.Ad" />
+                        </div>
+                        <RadzenButton Text="Kaydet"
+                                      ButtonStyle="ButtonStyle.Primary"
+                                      Icon="add"
+                                      class="w-100"
+                                      Click="@DepartmanKaydet" />
+                    </div>
+                    @if (!string.IsNullOrEmpty(mesaj))
+                    {
+                        <div class="alert mt-3 @alertClass">
+                            @mesaj
+                        </div>
+                    }
+                </EditForm>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <div class="alert alert-danger mt-4 text-center">Bu sayfaya sadece adminler erişebilir.</div>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private DepartmanModel departman = new();
+    private string mesaj;
+    private string alertClass = "";
+
+    private async Task DepartmanKaydet()
+    {
+        var response = await Http.PostAsJsonAsync("api/departman", departman);
+        if (response.IsSuccessStatusCode)
+        {
+            mesaj = "Departman başarıyla eklendi!";
+            alertClass = "alert-success";
+            departman = new();
+        }
+        else
+        {
+            mesaj = "Hata oluştu! " + await response.Content.ReadAsStringAsync();
+            alertClass = "alert-danger";
+        }
+    }
+
+    public class DepartmanModel
+    {
+        [Required(ErrorMessage = "Departman adı zorunludur!")]
+        public string Ad { get; set; }
+    }
+}

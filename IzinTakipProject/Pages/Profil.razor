@@ -1,0 +1,77 @@
+﻿@page "/profil"
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+@if (isLoading)
+{
+    <div>Yükleniyor...</div>
+}
+else if (profil != null)
+{
+    <div class="card shadow-sm rounded-4 p-4 mx-auto" style="max-width:430px;">
+        <div class="text-center mb-4">
+            <i class="material-icons" style="font-size:58px; color:#3a7bd5">account_circle</i>
+            <h5 class="mt-2">@profil.AdSoyad</h5>
+            <span class="badge bg-primary text-light">@profil.Rol</span>
+        </div>
+        <dl class="row mb-0">
+            <dt class="col-5 text-end">Email:</dt>
+            <dd class="col-7">@profil.Email</dd>
+
+            <dt class="col-5 text-end">Departman:</dt>
+            <dd class="col-7">@profil.DepartmanAd</dd>
+        </dl>
+        <div class="mt-4 text-center">
+          
+            <RadzenButton Text="Çıkış Yap" Icon="exit_to_app" ButtonStyle="ButtonStyle.Danger" Click="Logout" />
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning mt-4">Kullanıcı bilgileri alınamadı.</div>
+}
+
+@code {
+    private bool isLoading = true;
+    private ProfilModel? profil;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        if (!user.Identity.IsAuthenticated)
+        {
+            profil = null;
+            isLoading = false;
+            return;
+        }
+
+        var email = user.Identity.Name;
+        try
+        {
+            profil = await Http.GetFromJsonAsync<ProfilModel>($"api/kullanici/profil?email={email}");
+        }
+        catch
+        {
+            profil = null;
+        }
+        isLoading = false;
+    }
+
+    private async Task Logout()
+    {
+        await Http.PostAsync("api/auth/logout", null);
+        NavigationManager.NavigateTo("/giris");   // BURADA ARTIK HATA YOK!
+    }
+
+    public class ProfilModel
+    {
+        public string AdSoyad { get; set; }
+        public string Email { get; set; }
+        public string Rol { get; set; }
+        public string DepartmanAd { get; set; }
+    }
+}

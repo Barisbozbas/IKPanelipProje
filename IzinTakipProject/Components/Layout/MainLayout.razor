@@ -1,0 +1,151 @@
+﻿@inherits LayoutComponentBase
+@using System.Security.Claims
+@using BlazorBootstrap
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+
+<div style="display: flex; height: 100vh;">
+
+    <Sidebar Style="min-width:240px;"
+             DataProvider="SidebarDataProvider"
+             IconName="IconName.BriefcaseFill"
+             Title="İzin Takip Sistemi" />
+
+    <div style="flex:1; display: flex; flex-direction:column;">
+        <!-- HEADER (üst bar) -->
+        <div class="d-flex justify-content-end align-items-center px-3" style="height:56px; background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);">
+            <AuthorizeView Context="authContext">
+                <Authorized>
+                    <div class="dropdown" @onclick="ToggleProfileMenu" style="position:relative;">
+                        <button class="btn btn-link text-white dropdown-toggle" type="button" style="text-decoration:none;">
+                            <i class="material-icons" style="vertical-align: middle;">account_circle</i>
+                            <span style="margin-left:5px;">Profil</span>
+                        </button>
+                        @if (showProfileMenu)
+                        {
+                            <ul class="dropdown-menu show" style="right:0; left:auto; min-width:160px;">
+                                <li>
+                                    <a class="dropdown-item" @onclick="GoToProfile">
+                                        <i class="material-icons" style="vertical-align: middle;">account_circle</i>
+                                        <span style="margin-left:7px;">Profil</span>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item text-danger" @onclick="Logout">
+                                        <i class="material-icons" style="vertical-align: middle;">exit_to_app</i>
+                                        <span style="margin-left:7px;">Çıkış Yap</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        }
+                    </div>
+                </Authorized>
+                <NotAuthorized>
+                    <BlazorBootstrap.Button Color="ButtonColor.Light" OnClick="GoToLogin">Giriş Yap</BlazorBootstrap.Button>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+
+        <!-- İçerik -->
+        <div style="flex:1; padding: 2rem; background: #f5f7fa; overflow:auto;">
+            @Body
+        </div>
+    </div>
+</div>
+
+@code {
+    IEnumerable<NavItem>? navItems;
+    private bool isAdmin;
+    private bool isYonetici;
+    private bool isCalisan;
+    private bool isAuthenticated;
+    private bool showProfileMenu = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        isAuthenticated = user.Identity != null && user.Identity.IsAuthenticated;
+        isAdmin = user.IsInRole("Admin");
+        isYonetici = user.IsInRole("YONETICI");
+        isCalisan = user.IsInRole("User");
+    }
+
+    private async Task<SidebarDataProviderResult> SidebarDataProvider(SidebarDataProviderRequest request)
+    {
+        navItems = GetNavItems();
+        return await Task.FromResult(request.ApplyTo(navItems));
+    }
+    private IEnumerable<NavItem> GetNavItems()
+    {
+        var list = new List<NavItem>
+    {
+        new NavItem { Id = "1", Href = "/", IconName = IconName.HouseDoorFill, Text = "Ana Sayfa" }
+    };
+
+        if (!isAuthenticated)
+        {
+            list.Add(new NavItem { Id = "giris", Href = "/giris", IconName = IconName.BoxArrowInRight, Text = "Giriş Yap" });
+            return list;
+        }
+
+        list.Add(new NavItem { Id = "2", IconName = IconName.Calendar3, Text = "İzinler" });
+        list.Add(new NavItem { Id = "3", Href = "/izingiris", IconName = IconName.CalendarPlus, Text = "İzin Talep Et", ParentId = "2" });
+        list.Add(new NavItem { Id = "4", Href = "/izinlerim", IconName = IconName.ListCheck, Text = "İzin Listem", ParentId = "2" });
+
+        if (isYonetici || isAdmin)
+        {
+            list.Add(new NavItem { Id = "5", IconName = IconName.ShieldLockFill, Text = "Yönetim Paneli" });
+            list.Add(new NavItem { Id = "6", Href = "/yonetim-paneli", IconName = IconName.PersonBadgeFill, Text = "Onay Bekleyenler", ParentId = "5" });
+            list.Add(new NavItem { Id = "7", Href = "/izin-liste", IconName = IconName.CardChecklist, Text = "Tüm İzinler", ParentId = "5" });
+        }
+
+        if (isAdmin)
+        {
+            // Yönetim Paneli altında sadece Admin'e özel menüler
+            list.Add(new NavItem { Id = "8", Href = "/kullanici-olustur", IconName = IconName.PersonPlus, Text = "Kullanıcı Yönetimi", ParentId = "5" });
+            list.Add(new NavItem { Id = "9", Href = "/departman-ekle", IconName = IconName.Building, Text = "Departman Tanımı", ParentId = "5" });
+            list.Add(new NavItem { Id = "10", Href = "/izin-turu-ekle", IconName = IconName.CalendarEvent, Text = "İzin Türü Tanımı", ParentId = "5" });
+            list.Add(new NavItem { Id = "11", Href = "/izin-ayar", IconName = IconName.GearFill, Text = "İzin Ayarı", ParentId = "5" });
+        }
+
+       
+        return list;
+    }
+
+
+
+    private void GoToLogin() => Navigation.NavigateTo("/giris");
+
+    private void GoToProfile()
+    {
+        showProfileMenu = false;
+        Navigation.NavigateTo("/profil");
+    }
+
+    private async Task Logout()
+    {
+        showProfileMenu = false;
+        try
+        {
+            await Http.PostAsync("api/auth/logout", null);
+            await ((CustomAuthStateProvider)AuthStateProvider).MarkUserAsLoggedOut();
+            Navigation.NavigateTo("/giris", true);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Çıkış hatası: " + ex.Message);
+        }
+    }
+
+    private void ToggleProfileMenu()
+    {
+        showProfileMenu = !showProfileMenu;
+        StateHasChanged();
+    }
+}
+
+

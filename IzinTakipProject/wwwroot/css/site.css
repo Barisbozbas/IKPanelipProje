@@ -1,0 +1,164 @@
+﻿/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    font-size: 16px;
+    height: 100%;
+}
+
+/* HEADER */
+.rz-header {
+    z-index: 1050 !important;
+    box-shadow: 0 2px 8px rgba(80, 102, 144, 0.09);
+    background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+    color: #fff;
+    min-height: 60px;
+}
+
+/* Sidebar */
+.rz-sidebar {
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    width: 250px;
+    min-width: 200px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    position: fixed;
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+    border-right: 1px solid #f0f1f3;
+    padding-top: 60px;
+}
+
+    .rz-sidebar:not([style*="display: block"]) {
+        transform: translateX(-101%);
+    }
+
+    .rz-sidebar[style*="display: block"] {
+        transform: translateX(0);
+    }
+
+.rz-panelmenu ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.rz-panelmenu .rz-menuitem-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+}
+
+/* Sidebar PanelMenu padding */
+.rz-sidebar .rz-panelmenu {
+    padding: 0.5rem 1rem 1rem;
+}
+
+/* Main content */
+.rz-body {
+    margin-left: 250px;
+    background: #fff;
+    min-height: 100vh;
+    transition: margin-left 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+@media (max-width: 900px) {
+    .rz-sidebar {
+        width: 210px;
+        min-width: 160px;
+        padding-top: 56px;
+    }
+
+    .rz-body {
+        margin-left: 0 !important;
+        padding: 8px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .rz-sidebar {
+        width: 170px;
+        min-width: 120px;
+    }
+
+    .rz-body {
+        padding: 2px !important;
+    }
+}
+
+/* PanelMenu itemlar için active/hover */
+.rz-panelmenu .rz-menuitem-active > .rz-menuitem-content {
+    background-color: rgba(58, 123, 213, 0.15) !important;
+    color: #3a7bd5 !important;
+    border-left: 4px solid #3a7bd5;
+}
+
+.rz-panelmenu .rz-menuitem-content:hover {
+    background-color: rgba(58, 123, 213, 0.07) !important;
+    transition: background 0.2s;
+    color: #222;
+}
+
+/* Sidebar toggle button (hamburger) ekstra görünür olsun */
+.rz-sidebar-toggle {
+    font-size: 2rem !important;
+    color: #fff !important;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+/* Footer copyright */
+.footer-text {
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Error UI */
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+/* Kart veya form kutusunda taşma olmasın */
+.card {
+    overflow: visible !important;
+}
+
+/* Radzen DatePicker açılır paneli kutuya sığsın */
+.rz-datepicker-popup, .rz-calendar {
+    min-width: 250px !important;
+    max-width: 320px !important;
+    z-index: 9999 !important;
+}
+
+/* Eğer DatePicker kutusu karttan dışarı taşıyorsa sağdan kırpma: */
+.card .rz-datepicker-popup {
+    right: 0 !important;
+    left: auto !important;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }

@@ -1,0 +1,763 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\izinturuekle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\izinturuekle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\departmanekle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\departmanekle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\yetkilendirme\\kimlikolusturucu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\yetkilendirme\\kimlikolusturucu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\izinayarlar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\izinayarlar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\controllers\\izinayarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:controllers\\izinayarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\izingiris.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\izingiris.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\izinliste.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\izinliste.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\izinlerim.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\izinlerim.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\migrations\\20250728213521_identityveizintablolari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:migrations\\20250728213521_identityveizintablolari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\servisler\\applications\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:servisler\\applications\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\kullaniciolustur.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\kullaniciolustur.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\controllers\\izincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:controllers\\izincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\izindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\izindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\giris.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\giris.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\izin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\izin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\izintalepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\izintalepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\controllers\\izinturucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:controllers\\izinturucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\departman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\departman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\servisler\\applications\\tarihyardimcisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:servisler\\applications\\tarihyardimcisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\servisler\\applications\\izinservisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:servisler\\applications\\izinservisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\auth.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\auth.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\controllers\\departmancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:controllers\\departmancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\izinturu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\izinturu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\profil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\profil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\kullanicidetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\kullanicidetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\kullanicicreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\kullanicicreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\izintakipproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:izintakipproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\data\\entities\\loginresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:data\\entities\\loginresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\pages\\yonetimpaneli.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:pages\\yonetimpaneli.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|c:\\users\\baris.bozbas\\desktop\\izintakip\\izintakipproject\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A0D65D1-4A35-490F-8A4F-94EDA88E8DE7}|IzinTakipProject.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KimlikOlusturucu.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Yetkilendirme\\KimlikOlusturucu.cs",
+              "RelativeDocumentMoniker": "Data\\Yetkilendirme\\KimlikOlusturucu.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Yetkilendirme\\KimlikOlusturucu.cs",
+              "RelativeToolTip": "Data\\Yetkilendirme\\KimlikOlusturucu.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:33:26.388Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T21:45:04.905Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IzinListe.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinListe.razor",
+              "RelativeDocumentMoniker": "Pages\\IzinListe.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinListe.razor",
+              "RelativeToolTip": "Pages\\IzinListe.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T11:33:09.5Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Izinlerim.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Izinlerim.razor",
+              "RelativeDocumentMoniker": "Pages\\Izinlerim.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Izinlerim.razor",
+              "RelativeToolTip": "Pages\\Izinlerim.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T17:04:45.194Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IzinGiris.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinGiris.razor",
+              "RelativeDocumentMoniker": "Pages\\IzinGiris.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinGiris.razor",
+              "RelativeToolTip": "Pages\\IzinGiris.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T17:55:37.786Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IzinAyarlar.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinAyarlar.razor",
+              "RelativeDocumentMoniker": "Pages\\IzinAyarlar.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinAyarlar.razor",
+              "RelativeToolTip": "Pages\\IzinAyarlar.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T18:04:32.829Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IzinTuruEkle.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinTuruEkle.razor",
+              "RelativeDocumentMoniker": "Pages\\IzinTuruEkle.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\IzinTuruEkle.razor",
+              "RelativeToolTip": "Pages\\IzinTuruEkle.razor",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAswDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T08:15:50.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmanEkle.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\DepartmanEkle.razor",
+              "RelativeDocumentMoniker": "Pages\\DepartmanEkle.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\DepartmanEkle.razor",
+              "RelativeToolTip": "Pages\\DepartmanEkle.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T08:14:21.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IzinAyarController.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\IzinAyarController.cs",
+              "RelativeDocumentMoniker": "Controllers\\IzinAyarController.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\IzinAyarController.cs",
+              "RelativeToolTip": "Controllers\\IzinAyarController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T08:18:32.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Home.razor",
+              "RelativeToolTip": "Pages\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T11:56:51.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "KullaniciOlustur.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\KullaniciOlustur.razor",
+              "RelativeDocumentMoniker": "Pages\\KullaniciOlustur.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\KullaniciOlustur.razor",
+              "RelativeToolTip": "Pages\\KullaniciOlustur.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAGsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T10:45:42.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IzinController.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\IzinController.cs",
+              "RelativeDocumentMoniker": "Controllers\\IzinController.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\IzinController.cs",
+              "RelativeToolTip": "Controllers\\IzinController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:15:47.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomAuthStateProvider.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Servisler\\Applications\\CustomAuthStateProvider.cs",
+              "RelativeDocumentMoniker": "Servisler\\Applications\\CustomAuthStateProvider.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Servisler\\Applications\\CustomAuthStateProvider.cs",
+              "RelativeToolTip": "Servisler\\Applications\\CustomAuthStateProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T13:15:00.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250728213521_IdentityVeIzinTablolari.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Migrations\\20250728213521_IdentityVeIzinTablolari.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250728213521_IdentityVeIzinTablolari.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Migrations\\20250728213521_IdentityVeIzinTablolari.cs",
+              "RelativeToolTip": "Migrations\\20250728213521_IdentityVeIzinTablolari.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAwwFEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T13:33:45.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "KullaniciController.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\KullaniciController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KullaniciController.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\KullaniciController.cs",
+              "RelativeToolTip": "Controllers\\KullaniciController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAACoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:10:33.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Giris.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Giris.razor",
+              "RelativeDocumentMoniker": "Pages\\Giris.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Giris.razor",
+              "RelativeToolTip": "Pages\\Giris.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T13:10:52.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Izin.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Izin.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\Izin.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Izin.cs",
+              "RelativeToolTip": "Data\\Entities\\Izin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:09:54.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:48:13.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IzinDto.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\IzinDto.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\IzinDto.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\IzinDto.cs",
+              "RelativeToolTip": "Data\\Entities\\IzinDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T17:05:09.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AQIAACsAAAAAAAAAAAAowJ0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-29T10:44:48.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IzinTalepDto.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\IzinTalepDto.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\IzinTalepDto.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\IzinTalepDto.cs",
+              "RelativeToolTip": "Data\\Entities\\IzinTalepDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:26:14.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Departman.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Departman.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\Departman.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Departman.cs",
+              "RelativeToolTip": "Data\\Entities\\Departman.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T22:44:49.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T12:30:34.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IzinTuruController.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\IzinTuruController.cs",
+              "RelativeDocumentMoniker": "Controllers\\IzinTuruController.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\IzinTuruController.cs",
+              "RelativeToolTip": "Controllers\\IzinTuruController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T08:36:49.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TarihYardimcisi.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Servisler\\Applications\\TarihYardimcisi.cs",
+              "RelativeDocumentMoniker": "Servisler\\Applications\\TarihYardimcisi.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Servisler\\Applications\\TarihYardimcisi.cs",
+              "RelativeToolTip": "Servisler\\Applications\\TarihYardimcisi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:22:22.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IzinServisi.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Servisler\\Applications\\IzinServisi.cs",
+              "RelativeDocumentMoniker": "Servisler\\Applications\\IzinServisi.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Servisler\\Applications\\IzinServisi.cs",
+              "RelativeToolTip": "Servisler\\Applications\\IzinServisi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:21:29.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Auth.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Auth.razor",
+              "RelativeDocumentMoniker": "Pages\\Auth.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Auth.razor",
+              "RelativeToolTip": "Pages\\Auth.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T21:22:09.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DepartmanController.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\DepartmanController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartmanController.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Controllers\\DepartmanController.cs",
+              "RelativeToolTip": "Controllers\\DepartmanController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T08:29:35.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\ApplicationUser.cs",
+              "RelativeToolTip": "Data\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:40:12.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IzinTuru.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\IzinTuru.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\IzinTuru.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\IzinTuru.cs",
+              "RelativeToolTip": "Data\\Entities\\IzinTuru.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:10:26.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Kullanici.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Kullanici.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\Kullanici.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Kullanici.cs",
+              "RelativeToolTip": "Data\\Entities\\Kullanici.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:29:19.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "KullaniciDetay.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\KullaniciDetay.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\KullaniciDetay.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\KullaniciDetay.cs",
+              "RelativeToolTip": "Data\\Entities\\KullaniciDetay.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:07:01.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Profil.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Profil.razor",
+              "RelativeDocumentMoniker": "Pages\\Profil.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\Profil.razor",
+              "RelativeToolTip": "Pages\\Profil.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T07:48:13.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IzinTakipProject.csproj",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\IzinTakipProject.csproj",
+              "RelativeDocumentMoniker": "IzinTakipProject.csproj",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\IzinTakipProject.csproj",
+              "RelativeToolTip": "IzinTakipProject.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-30T06:50:48.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "KullaniciCreateModel.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\KullaniciCreateModel.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\KullaniciCreateModel.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\KullaniciCreateModel.cs",
+              "RelativeToolTip": "Data\\Entities\\KullaniciCreateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T22:43:05.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\_Imports.razor",
+              "RelativeDocumentMoniker": "_Imports.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\_Imports.razor",
+              "RelativeToolTip": "_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T06:45:13.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T17:57:30.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Rol.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\Rol.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\Rol.cs",
+              "RelativeToolTip": "Data\\Entities\\Rol.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:31:42.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LoginResult.cs",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\LoginResult.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\LoginResult.cs",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Data\\Entities\\LoginResult.cs",
+              "RelativeToolTip": "Data\\Entities\\LoginResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T14:03:31.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "YonetimPaneli.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\YonetimPaneli.razor",
+              "RelativeDocumentMoniker": "Pages\\YonetimPaneli.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Pages\\YonetimPaneli.razor",
+              "RelativeToolTip": "Pages\\YonetimPaneli.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T16:14:45.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T11:56:45.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Components\\Routes.razor",
+              "RelativeToolTip": "Components\\Routes.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T21:25:02.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-29T13:03:34.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-29T14:16:52.647Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

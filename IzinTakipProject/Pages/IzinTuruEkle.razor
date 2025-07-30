@@ -1,0 +1,52 @@
+﻿@page "/izin-turu-ekle"
+@inject HttpClient Http
+
+<h3>Yeni İzin Türü Tanımla</h3>
+
+<AuthorizeView Roles="Admin" Context="authContext">
+    <Authorized>
+        <EditForm Model="izinTuru" OnValidSubmit="IzinTuruKaydet" Context="formContext">
+            <DataAnnotationsValidator />
+              <div class="d-flex justify-content-center" style="min-height: calc(100vh - 80px);">
+            <div class="w-100" style="max-width: 420px; margin-top: 60px;">
+                <div class="mb-3">
+                    <label>İzin Türü Adı:</label>
+                    <InputText class="form-control" @bind-Value="izinTuru.Ad" />
+                </div>
+                <RadzenButton Text="Kaydet" ButtonStyle="ButtonStyle.Primary" Icon="add" Click="@IzinTuruKaydet" />
+            </div>
+            </div>
+        </EditForm>
+        @if (!string.IsNullOrEmpty(mesaj))
+        {
+            <div class="alert alert-success mt-3">@mesaj</div>
+        }
+    </Authorized>
+    <NotAuthorized>
+        <div class="alert alert-danger mt-4">Bu sayfaya sadece adminler erişebilir.</div>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private IzinTuruModel izinTuru = new();
+    private string mesaj;
+
+    private async Task IzinTuruKaydet()
+    {
+        var response = await Http.PostAsJsonAsync("api/izinturu", izinTuru);
+        if (response.IsSuccessStatusCode)
+        {
+            mesaj = "İzin türü başarıyla eklendi!";
+            izinTuru = new();
+        }
+        else
+        {
+            mesaj = "Hata oluştu!";
+        }
+    }
+
+    public class IzinTuruModel
+    {
+        public string Ad { get; set; }
+    }
+}

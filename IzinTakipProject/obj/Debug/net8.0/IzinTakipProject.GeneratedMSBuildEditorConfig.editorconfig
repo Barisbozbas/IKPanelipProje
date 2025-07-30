@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = IzinTakipProject
+build_property.RootNamespace = IzinTakipProject
+build_property.ProjectDir = C:\Users\baris.bozbas\Desktop\IzinTakip\IzinTakipProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\baris.bozbas\Desktop\IzinTakip\IzinTakipProject
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/Auth.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/DepartmanEkle.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWFuRWtsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/Giris.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2lyaXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/IzinAyarlar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXppbkF5YXJsYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/IzinGiris.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXppbkdpcmlzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/Izinlerim.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXppbmxlcmltLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/IzinListe.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXppbkxpc3RlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/IzinTuruEkle.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXppblR1cnVFa2xlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/KullaniciOlustur.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS3VsbGFuaWNpT2x1c3R1ci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/Profil.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/YonetimPaneli.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcWW9uZXRpbVBhbmVsaS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-nn7cc4f36h
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-9lt3f5qyg6
+
+[C:/Users/baris.bozbas/Desktop/IzinTakip/IzinTakipProject/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

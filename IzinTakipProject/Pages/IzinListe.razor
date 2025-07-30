@@ -1,0 +1,173 @@
+﻿  @page "/izin-liste"
+@attribute [Authorize]
+@using IzinTakipProject.Data
+@using IzinTakipProject.Data.Entities
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext Db
+
+@using Radzen
+@using Radzen.Blazor
+
+<h3>İzin Listesi</h3>
+
+@if (izinler == null)
+{
+    <RadzenProgressBar Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{
+    <RadzenDataGrid TItem="IzinRow" Data="@izinler"
+                    FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                    ShowFilteringRow="true"
+                    AllowFiltering="true"
+                    AllowPaging="true"
+                    AllowSorting="true"
+                    ShowPagingSummary="true"
+                    PageSizeOptions="@pageSizeOptions"
+                    FilterPopupRenderMode="PopupRenderMode.OnDemand"
+                    FilterMode="FilterMode.Advanced"
+                    LogicalFilterOperator="Radzen.LogicalFilterOperator.And"
+                    PageSize="15"
+                    RowRender="@RowClassSelector"
+                    @ref="grid">
+        <Columns>
+            <RadzenDataGridColumn TItem="IzinRow" Property="CalisanAdSoyad" Title="Çalışan" />
+            <RadzenDataGridColumn TItem="IzinRow" Property="DepartmanAd" Title="Departman" Filterable="true">
+                <FilterTemplate>
+                    <RadzenDropDown @bind-Value="departmanFilter" Data="@departmanlar" TextProperty="Ad" ValueProperty="Ad" Style="width:100%;" Change="@((object val) => grid.FirstPage())" AllowClear="true" />
+                </FilterTemplate>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="IzinRow" Property="IzinTuruAd" Title="İzin Türü" />
+            <RadzenDataGridColumn TItem="IzinRow" Property="BaslangicTarihi" Title="Başlangıç"
+                                  >
+                <Template Context="data">
+                    @data.BaslangicTarihi.ToString("dd.MM.yyyy")
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="IzinRow" Property="BitisTarihi" Title="Bitiş"
+                                  >
+                <Template Context="data">
+                    @data.BitisTarihi.ToString("dd.MM.yyyy")
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="IzinRow" Property="IsGunuSayisi" Title="İş Günü" />
+            <RadzenDataGridColumn TItem="IzinRow" Property="OnaylandiMi" Title="Durum">
+                <Template Context="data">
+                    @if (data.OnaylandiMi)
+                    {
+                        <span class="text-success font-weight-bold">Onaylandı</span>
+                    }
+                    else
+                    {
+                        <span class="text-warning font-weight-bold">Bekliyor</span>
+                    }
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="IzinRow" Title="Onayla">
+                <Template Context="data">
+                    @if (!data.OnaylandiMi)
+                    {
+                        <RadzenButton Icon="check" ButtonStyle="ButtonStyle.Success" Size="ButtonSize.Small" Click="@(() => Onayla(data))" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check" Style="color:green" />
+                    }
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid>
+}
+
+@code {
+    private RadzenDataGrid<IzinRow> grid;
+    private List<IzinRow> izinler;
+    private List<Departman> departmanlar;
+    private string departmanFilter;
+    private DateTime? baslangicFilter;
+    private DateTime? bitisFilter;
+    private int maksimumIzinGun = 0;
+    private Dictionary<string, int> kullaniciIzinToplam = new();
+    IEnumerable<int> pageSizeOptions = new int[] { 10, 25, 50 };
+    protected override async Task OnInitializedAsync()
+    {
+        // Tüm departmanlar
+        departmanlar = await Db.Departmanlar.ToListAsync();
+
+        // Maksimum izin günü çek
+        maksimumIzinGun = (await Db.IzinAyarlar.FirstOrDefaultAsync())?.MaksimumIzinGun ?? 20;
+
+        // Tüm izinler + ilgili navigationlar
+        var izinList = await Db.Izinler
+            .Include(i => i.Calisan).ThenInclude(k => k.Departman)
+            .Include(i => i.IzinTuru)
+            .ToListAsync();
+
+        // Kullanıcıların izin toplamlarını hesapla
+        kullaniciIzinToplam = izinList
+            .GroupBy(i => i.KullaniciId)
+            .ToDictionary(
+                g => g.Key,
+                g => g.Sum(x => x.IsGunuSayisi)
+            );
+
+        // DataGrid için map
+        izinler = izinList.Select(i => new IzinRow
+            {
+                Id = i.Id,
+                KullaniciId = i.KullaniciId,
+                CalisanAdSoyad = i.Calisan?.AdSoyad,
+                DepartmanAd = i.Calisan?.Departman?.Ad,
+                IzinTuruAd = i.IzinTuru?.Ad,
+                BaslangicTarihi = i.BaslangicTarihi,
+                BitisTarihi = i.BitisTarihi,
+                IsGunuSayisi = i.IsGunuSayisi,
+                OnaylandiMi = i.OnaylandiMi,
+                KirmiziMi = kullaniciIzinToplam.TryGetValue(i.KullaniciId, out int toplam) && toplam > maksimumIzinGun
+            }).ToList();
+    }
+
+    // Satır renklendirme
+    void RowClassSelector(RowRenderEventArgs<IzinRow> args)
+    {
+        if (args.Data.KirmiziMi)
+        {
+            args.Attributes.Add("style", "background-color: #ffe6e6;"); // Hafif kırmızı
+        }
+    }
+
+    // Onay butonu işlemi
+    private async Task Onayla(IzinRow izin)
+    {
+        var izinDb = await Db.Izinler.FindAsync(izin.Id);
+        if (izinDb != null && !izinDb.OnaylandiMi)
+        {
+            izinDb.OnaylandiMi = true;
+            await Db.SaveChangesAsync();
+            izin.OnaylandiMi = true;
+            StateHasChanged();
+        }
+    }
+
+    // RadzenGrid Filtering
+    IEnumerable<IzinRow> izinlerFiltered => izinler
+        .Where(i =>
+            (string.IsNullOrEmpty(departmanFilter) || i.DepartmanAd == departmanFilter) &&
+            (!baslangicFilter.HasValue || i.BaslangicTarihi.Date >= baslangicFilter.Value.Date) &&
+            (!bitisFilter.HasValue || i.BitisTarihi.Date <= bitisFilter.Value.Date)
+        );
+
+    public class IzinRow
+    {
+        public int Id { get; set; }
+        public string KullaniciId { get; set; }
+        public string CalisanAdSoyad { get; set; }
+        public string DepartmanAd { get; set; }
+        public string IzinTuruAd { get; set; }
+        public DateTime BaslangicTarihi { get; set; }
+        public DateTime BitisTarihi { get; set; }
+        public int IsGunuSayisi { get; set; }
+        public bool OnaylandiMi { get; set; }
+        public bool KirmiziMi { get; set; }
+    }
+}

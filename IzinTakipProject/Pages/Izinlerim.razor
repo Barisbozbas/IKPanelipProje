@@ -1,0 +1,86 @@
+﻿@page "/izinlerim"
+@inject HttpClient Http
+@inject AuthenticationStateProvider AuthStateProvider
+
+<h3 class="mb-4">Aldığım İzinler</h3>
+
+@if (isLoading)
+{
+    <RadzenProgressBar Mode="ProgressBarMode.Indeterminate" />
+}
+else if (izinler.Count == 0)
+{
+    <div class="alert alert-info mt-4">Henüz bir izin talebiniz yok.</div>
+}
+else
+{
+    <RadzenDataGrid Data="@izinler"
+                    TItem="IzinDto"
+                    PageSize="7"
+                    AllowFiltering="true"
+                    AllowSorting="true"
+                    Class="mt-2 shadow"
+                    ShowPagingSummary="true"
+                    PageSizeOptions="@pageSizeOptions"
+                    Responsive="true">
+        <Columns>
+            <RadzenDataGridColumn TItem="IzinDto" Property="IzinTuruAd" Title="İzin Türü" Filterable="true" Sortable="true" />
+            <RadzenDataGridColumn TItem="IzinDto" Property="BaslangicTarihi" Title="Başlangıç" Filterable="true" Sortable="true">
+                <Template Context="izin">@izin.BaslangicTarihi.ToString("dd.MM.yyyy")</Template>
+                <FilterTemplate>
+                    <RadzenTextBox @bind-Value="baslangicFilter" Placeholder="örn. 01.07.2024" Style="width: 100%;" Name="BaslangicTarihi" />
+                </FilterTemplate>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="IzinDto" Property="BitisTarihi" Title="Bitiş" Filterable="true" Sortable="true">
+                <Template Context="izin">@izin.BitisTarihi.ToString("dd.MM.yyyy")</Template>
+                <FilterTemplate>
+                    <RadzenTextBox @bind-Value="bitisFilter" Placeholder="örn. 15.07.2024" Style="width: 100%;" Name="BitisTarihi" />
+                </FilterTemplate>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="IzinDto" Property="IsGunuSayisi" Title="İş Günü" Filterable="true" Sortable="true" />
+            <RadzenDataGridColumn TItem="IzinDto" Property="OnaylandiMi" Title="Durum" Filterable="true" Sortable="true">
+                <Template Context="izin">
+                    @if (izin.OnaylandiMi)
+                    {
+                        <span class="badge bg-success">Onaylandı</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning">Bekliyor</span>
+                    }
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid>
+}
+
+@code {
+    private List<IzinDto> izinler = new();
+    private bool isLoading = true;
+    IEnumerable<int> pageSizeOptions = new int[] { 10, 25, 50 };
+    // Filtre textbox'ları (isteğe bağlı, Radzen otomatik de filtreler)
+    private string baslangicFilter;
+    private string bitisFilter;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        var userId = user.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+        if (!string.IsNullOrEmpty(userId))
+        {
+            izinler = await Http.GetFromJsonAsync<List<IzinDto>>($"api/izin/kullanici/{userId}") ?? new();
+        }
+        isLoading = false;
+    }
+
+    public class IzinDto
+    {
+        public string IzinTuruAd { get; set; }
+        public DateTime BaslangicTarihi { get; set; }
+        public DateTime BitisTarihi { get; set; }
+        public int IsGunuSayisi { get; set; }
+        public bool OnaylandiMi { get; set; }
+    }
+}

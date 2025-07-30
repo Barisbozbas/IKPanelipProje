@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\IzinTakipProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\IzinTakipProject.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\css\\material3-base.css",
+      "PackagePath": "staticwebassets\\css\\material3-base.css"
+    },
+    {
+      "Id": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\baris.bozbas\\Desktop\\IzinTakip\\IzinTakipProject\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.IzinTakipProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.IzinTakipProject.props",
+      "PackagePath": "build\\IzinTakipProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.IzinTakipProject.props",
+      "PackagePath": "buildMultiTargeting\\IzinTakipProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.IzinTakipProject.props",
+      "PackagePath": "buildTransitive\\IzinTakipProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

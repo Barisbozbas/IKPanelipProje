@@ -1,0 +1,92 @@
+﻿@page "/izin-ayar"
+@inject HttpClient Http
+
+<style>
+    .center-screen {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Arka planı çok açık gri yapabilirsin, istersen kaldır */
+        background: #f7f8fa;
+    }
+    .card-custom {
+        max-width: 400px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 4px 24px rgba(60, 72, 100, 0.08), 0 1.5px 5px rgba(0,0,0,0.03);
+        background: #fff;
+    }
+     (max-width: 600px) {
+        .card-custom {
+            max-width: 95vw;
+            padding: 1.5rem !important;
+        }
+    }
+</style>
+
+<div class="center-screen">
+    <div class="card card-custom shadow p-4">
+        <h4 class="text-center mb-3">Yıllık Maksimum İzin Günü Ayarı</h4>
+        <AuthorizeView Roles="Admin" Context="authContext">
+            <Authorized>
+                <EditForm Model="@izinAyar">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="mb-3">
+                        <label for="maksimumIzinGun" class="form-label fw-semibold">
+                            Maksimum İzin Günü:
+                        </label>
+                        <InputNumber id="maksimumIzinGun" class="form-control form-control-lg"
+                                     @bind-Value="izinAyar.MaksimumIzinGun"
+                                     min="1" max="90" />
+                    </div>
+                    <RadzenButton Text="Kaydet" ButtonStyle="ButtonStyle.Primary" Icon="save"
+                                  Style="width: 100%; font-weight: 600;" Click="@Kaydet" />
+                </EditForm>
+                @if (!string.IsNullOrEmpty(mesaj))
+                {
+                    <div class="alert @alertClass mt-3 text-center" style="font-size:1rem">@mesaj</div>
+                }
+            </Authorized>
+            <NotAuthorized>
+                <div class="alert alert-danger mt-4 text-center">Bu sayfaya sadece adminler erişebilir.</div>
+            </NotAuthorized>
+        </AuthorizeView>
+    </div>
+</div>
+
+@code {
+    private IzinAyarModel izinAyar = new();
+    private string mesaj;
+    private string alertClass = "alert-success";
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var ayar = await Http.GetFromJsonAsync<IzinAyarModel>("api/izinayar");
+            if (ayar != null)
+                izinAyar = ayar;
+        }
+        catch (HttpRequestException)
+        {
+            izinAyar = new IzinAyarModel();
+        }
+    }
+
+    private async Task Kaydet()
+    {
+        var response = await Http.PostAsJsonAsync("api/izinayar", izinAyar);
+        if (response.IsSuccessStatusCode)
+        {
+            mesaj = "Başarıyla kaydedildi!";
+            alertClass = "alert-success";
+        }
+        else
+        {
+            mesaj = "Bir hata oluştu!";
+            alertClass = "alert-danger";
+        }
+    }
+}

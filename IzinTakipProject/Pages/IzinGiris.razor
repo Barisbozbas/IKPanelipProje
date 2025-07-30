@@ -1,0 +1,192 @@
+﻿@page "/izingiris"
+@using System.ComponentModel.DataAnnotations
+@inject HttpClient Http
+@inject AuthenticationStateProvider AuthStateProvider
+
+<center><h3 class="mb-4">İzin Talep Et</h3></center>
+
+@if (isLoading)
+{
+    <div>Yükleniyor...</div>
+}
+else
+{
+    <div class="card shadow p-4 mx-auto" style="max-width:420px;">
+        <div class="mb-2 text-center">
+            <span class="badge bg-primary">Kalan Yıllık İzniniz: <b>@kalanIzinGun</b> gün</span>
+        </div>
+        <EditForm Model="@dto" OnValidSubmit="IzinKaydet">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+              <div class="mb-3">
+            <label>Başlangıç Tarihi:</label></div>
+            <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Left" AlignItems="AlignItems.Center" Gap="0.5rem" class="mb-3">
+                
+                <RadzenDatePicker @bind-Value="dto.BaslangicTarihi"
+                                  Min="@dto.BaslangicTarihi"
+                                  DateRender="@DisableWeekends"
+                                  Change="@OnTarihDegisti"
+                                  ShowTime="false"
+                                  Style="width:85%;" />
+            </RadzenStack>
+            <br />
+             <div class="mb-3">
+                <label>Bitiş Tarihi:</label>
+             </div>
+            <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Left" AlignItems="AlignItems.Center" Gap="0.5rem" class="mb-3">
+                
+                
+                <RadzenDatePicker @bind-Value="dto.BitisTarihi"
+                                  Min="@dto.BaslangicTarihi"
+                                  DateRender="@DisableWeekends"
+                                  Change="@OnTarihDegisti"
+                                  ShowTime="false"
+                                  Style="width:85%;" />
+            </RadzenStack>
+            <br />
+            <div class="mb-3">
+                <label>İzin Türü:</label>
+                <InputSelect @bind-Value="dto.IzinTuruId" class="form-control">
+                    <option value="">Seçiniz</option>
+                    @foreach (var tur in izinTurleri)
+                    {
+                        <option value="@tur.Id">@tur.Ad</option>
+                    }
+                </InputSelect>
+            </div>
+            <br />
+            <div class="mb-3">
+                <label>İzin Gün Sayısı:</label>
+                <input class="form-control" value="@hesaplananGun" readonly />
+            </div>
+            @if (dto.BitisTarihi < dto.BaslangicTarihi)
+            {
+                <div class="alert alert-danger p-2">Bitiş tarihi, başlangıç tarihinden önce olamaz!</div>
+            }
+            @if (hesaplananGun > kalanIzinGun)
+            {
+                <div class="alert alert-warning p-2">
+                    Maksimum izin hakkınızı aşıyorsunuz! Kalan: @kalanIzinGun gün.
+                </div>
+            }
+            <RadzenButton Text="İzin Talep Et" ButtonStyle="ButtonStyle.Success" Icon="send"
+                          Disabled="@(!FormGecerliMi())" Click="@IzinKaydet" />
+        </EditForm>
+        @if (!string.IsNullOrEmpty(mesaj))
+        {
+            <div class="alert @alertClass mt-3 text-center">@mesaj</div>
+        }
+    </div>
+}
+
+@code {
+    private bool isLoading = true;
+    private List<IzinTuruDto> izinTurleri = new();
+    private int toplamKullanilanIzin = 0;
+    private int maksimumIzinGun = 0;
+    private int kalanIzinGun = 0;
+    private string mesaj;
+    private string alertClass = "alert-success";
+    private IzinTalepDto dto = new IzinTalepDto { BaslangicTarihi = DateTime.Today, BitisTarihi = DateTime.Today };
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+
+        // Maksimum izin günü çek
+        var ayar = await Http.GetFromJsonAsync<IzinAyarModel>("api/izinayar");
+        maksimumIzinGun = ayar?.MaksimumIzinGun ?? 14;
+
+        // Kullanıcının geçmiş izinlerini çek
+        var auth = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = auth.User;
+        var userId = user.FindFirst("sub")?.Value ?? user.Identity.Name;
+        dto.UserId = auth.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+        var kullanilanIzin = await Http.GetFromJsonAsync<int>($"api/izin/kullanilan-gun/{dto.UserId}");
+        toplamKullanilanIzin = kullanilanIzin;
+       
+        // Kalan hakkı hesapla
+        kalanIzinGun = maksimumIzinGun - toplamKullanilanIzin;
+        if (kalanIzinGun < 0) kalanIzinGun = 0;
+
+        // İzin türleri çek
+        izinTurleri = await Http.GetFromJsonAsync<List<IzinTuruDto>>("api/izinturu");
+
+        isLoading = false;
+    }
+
+    int hesaplananGun => dto.BitisTarihi >= dto.BaslangicTarihi
+        ? TarihYardimcisi.GunSayisiIsGunu(dto.BaslangicTarihi, dto.BitisTarihi)
+        : 0;
+
+    private void OnTarihDegisti(DateTime? value)
+    {
+        StateHasChanged();
+    }
+
+    private async Task IzinKaydet()
+    {
+        if (hesaplananGun > kalanIzinGun)
+        {
+            mesaj = $"Kalan izin hakkınızı aşıyor! Maksimum kullanabileceğiniz: {kalanIzinGun} gün.";
+            alertClass = "alert-danger";
+            return;
+        }
+        // API'ya gönder
+        var resp = await Http.PostAsJsonAsync("api/izin", dto);
+
+        if (resp.IsSuccessStatusCode)
+        {
+            mesaj = "Talebiniz başarıyla iletildi!";
+            alertClass = "alert-success";
+            toplamKullanilanIzin += hesaplananGun;
+            kalanIzinGun = maksimumIzinGun - toplamKullanilanIzin;
+            dto = new IzinTalepDto { BaslangicTarihi = DateTime.Today, BitisTarihi = DateTime.Today, UserId = dto.UserId };
+        }
+        else
+        {
+            var hata = await resp.Content.ReadAsStringAsync();
+            mesaj = $"Talebiniz kaydedilemedi! {(string.IsNullOrWhiteSpace(hata) ? "" : hata)}";
+            alertClass = "alert-danger";
+        }
+    }
+
+
+    bool FormGecerliMi() =>
+        hesaplananGun > 0 &&
+        hesaplananGun <= kalanIzinGun &&
+        dto.IzinTuruId != 0 &&
+        dto.BitisTarihi >= dto.BaslangicTarihi;
+
+    void DisableWeekends(Radzen.DateRenderEventArgs args)
+    {
+        if (args.Date.DayOfWeek == DayOfWeek.Saturday || args.Date.DayOfWeek == DayOfWeek.Sunday)
+        {
+            args.Disabled = true;
+        }
+    }
+
+    // Modeller
+    public class IzinAyarModel { public int MaksimumIzinGun { get; set; } = 14; }
+    public class IzinTuruDto { public int Id { get; set; } public string Ad { get; set; } }
+    // public class IzinTalepDto
+    // {
+    //     [Required] public DateTime BaslangicTarihi { get; set; }
+    //     [Required] public DateTime BitisTarihi { get; set; }
+    //     [Required] public int IzinTuruId { get; set; }
+    // }
+
+    public static class TarihYardimcisi
+    {
+        public static int GunSayisiIsGunu(DateTime baslangic, DateTime bitis)
+        {
+            int gun = 0;
+            for (var dt = baslangic.Date; dt <= bitis.Date; dt = dt.AddDays(1))
+            {
+                if (dt.DayOfWeek != DayOfWeek.Saturday && dt.DayOfWeek != DayOfWeek.Sunday)
+                    gun++;
+            }
+            return gun;
+        }
+    }
+}
